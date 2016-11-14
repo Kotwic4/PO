@@ -3,12 +3,11 @@ import agh.cs.lab2.*;
 import agh.cs.lab3.*;
 /**
  * The map visualizer converts the {@link IWorldMap} map into a string
- * representation.
- *
- * @author apohllo
- *
- */
-
+        * representation.
+        *
+        * @author apohllo
+        *
+        */
 public class MapVisualizer {
     /**
      * Convert selected region of the map into a string. It is assumed that the
@@ -28,13 +27,13 @@ public class MapVisualizer {
         for (int i = upperRight.y + 1; i >= lowerLeft.y - 1; i--) {
             if (i == upperRight.y + 1) {
                 builder.append(" y\\x ");
-                for (int j = lowerLeft.y; j < upperRight.x + 1; j++) {
+                for (int j = lowerLeft.x; j < upperRight.x + 1; j++) {
                     builder.append(String.format("%2d", j));
                 }
                 builder.append(System.lineSeparator());
             }
             builder.append(String.format("%3d: ", i));
-            for (int j = lowerLeft.y; j <= upperRight.x + 1; j++) {
+            for (int j = lowerLeft.x; j <= upperRight.x + 1; j++) {
                 Position currentPosition = new Position(j, i);
                 if (j <= upperRight.x) {
                     if (i < lowerLeft.y || i > upperRight.y) {
