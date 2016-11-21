@@ -12,7 +12,7 @@ public class RectangularMap implements IWorldMap {
     Position zero = new Position(0,0);
     Position max;
 
-    RectangularMap(int width, int height){
+    public RectangularMap(int width, int height){
         this.max = new Position(width,height);
         this.cars = new ArrayList<>();
     }
